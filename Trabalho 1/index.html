@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Pagina de teste</title>
-    </head>
-    <body>
-        <p>Pagina de teste</p>
-    </body>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p></p>
+    <button id="changeColorButton">Mudar a cor do fundo da pagina</button>
+    <script>
+        const colors = ['blue', 'red', 'green', 'yellow', 'pink'];
+        function changeBackgroundColor() {
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+        const changeColorButton = document.getElementById('changeColorButton');
+        changeColorButton.addEventListener('click', changeBackgroundColor);
+    </script>
+</body>
 </html>
